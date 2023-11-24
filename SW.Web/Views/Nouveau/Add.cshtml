@@ -1,0 +1,21 @@
+﻿@using SW.Models
+
+@model SW.Web.ViewModels.AddCitoyenViewModel
+@{
+    ViewData["Title"] = "Add";
+}
+
+<h1>Add</h1>
+
+@* Utilisation des tag helpers pour faciliter la création du formulaire *@
+<form asp-controller="Nouveau" asp-action="Add" method="post">
+    <input asp-for="Nom" />
+
+    <input asp-for="Prenom" />
+
+    <input asp-for="Age" />
+
+    @* Utilisation du tag helper asp-items pour créer les <option> du select *@
+    <select asp-for="EspeceId" asp-items="Model.Especes"></select>
+    <button type="submit">Submit</button>
+</form>

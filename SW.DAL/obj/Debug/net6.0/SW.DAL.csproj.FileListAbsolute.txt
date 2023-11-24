@@ -1,0 +1,17 @@
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\bin\Debug\net6.0\SW.DAL.deps.json
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\bin\Debug\net6.0\SW.DAL.runtimeconfig.json
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\bin\Debug\net6.0\SW.DAL.dll
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\bin\Debug\net6.0\SW.DAL.pdb
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\bin\Debug\net6.0\SW.Models.dll
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\bin\Debug\net6.0\SW.Models.pdb
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\SW.DAL.csproj.AssemblyReference.cache
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\SW.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\SW.DAL.AssemblyInfoInputs.cache
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\SW.DAL.AssemblyInfo.cs
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\SW.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\SW.DAL.csproj.CopyComplete
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\SW.DAL.dll
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\refint\SW.DAL.dll
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\SW.DAL.pdb
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\SW.DAL.genruntimeconfig.cache
+C:\Users\Alexandre\Documents\Dev\ESEO\SW\SW.DAL\obj\Debug\net6.0\ref\SW.DAL.dll

@@ -1,0 +1,17 @@
+﻿@model List<string>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var test = 1 + 1;
+}
+<h1>Bienvenue @ViewData["Nom"] </h1>
+<h2>Vous trouverez ici des outils de gestion</h2>
+
+
+
+@foreach(var n in Model)
+{
+    <h3>@n</h3>
+}
