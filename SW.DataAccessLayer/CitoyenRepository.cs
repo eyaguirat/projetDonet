@@ -1,29 +1,31 @@
 ﻿using SW.Models;
-
+using System.Collections.Generic;
+using System.Linq;
 namespace SW.DataAccessLayer
 {
     public class CitoyenRepository
     {
-        public StarWarsDBContext SWDbContext { get; set; }
+        private readonly StarWarsDBContext _starWarsDBContext;
         public CitoyenRepository(
             StarWarsDBContext starWarsDBContext // Le StarWarsDBContext est injecté grâce au program.cs
         )
         {
-            SWDbContext = starWarsDBContext;
+            _starWarsDBContext = starWarsDBContext;
         }
 
         public void AddCitoyen(Citoyen citoyen)
         {
             // Ajout du citoyen dans le contexte des citoyens
-            SWDbContext.Citoyens.Add(citoyen);
+            _starWarsDBContext.Citoyens.Add(citoyen);
 
             // Sauvegarde des changements en base
-            SWDbContext.SaveChanges();
+            _starWarsDBContext.SaveChanges();
         }
 
+      
         public List<Citoyen> GetCitoyens()
         {
-            return SWDbContext.Citoyens.ToList();
+            return _starWarsDBContext.Citoyens.ToList();
         }
     }
 }

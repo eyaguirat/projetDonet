@@ -26,17 +26,26 @@ namespace SW.DataAccessLayer.Migrations
                     b.Property<int>("Age")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("EspeceId")
+                    b.Property<int?>("Bonheur")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("MereBiologiqueID")
+                    b.Property<int?>("EspeceId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("Fertilite")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("MereBiologiqueID")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Nom")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("PereBiologiqueID")
+                    b.Property<int?>("PereBiologiqueID")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int?>("PointsDeMerites")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("Prenom")
@@ -52,38 +61,6 @@ namespace SW.DataAccessLayer.Migrations
                     b.HasIndex("PereBiologiqueID");
 
                     b.ToTable("Citoyens");
-                });
-
-            modelBuilder.Entity("SW.Models.Distinction", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("BonusMerite")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int?>("CitoyenId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("DecerneAId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("DecerneParId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CitoyenId");
-
-                    b.HasIndex("DecerneAId");
-
-                    b.HasIndex("DecerneParId");
-
-                    b.ToTable("Distinction");
                 });
 
             modelBuilder.Entity("SW.Models.Espece", b =>
@@ -104,62 +81,28 @@ namespace SW.DataAccessLayer.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Espece");
+                    b.ToTable("Especes");
                 });
 
             modelBuilder.Entity("SW.Models.Citoyen", b =>
                 {
                     b.HasOne("SW.Models.Espece", "Espece")
                         .WithMany()
-                        .HasForeignKey("EspeceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("EspeceId");
 
                     b.HasOne("SW.Models.Citoyen", "MereBiologique")
                         .WithMany()
-                        .HasForeignKey("MereBiologiqueID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("MereBiologiqueID");
 
                     b.HasOne("SW.Models.Citoyen", "PereBiologique")
                         .WithMany()
-                        .HasForeignKey("PereBiologiqueID")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PereBiologiqueID");
 
                     b.Navigation("Espece");
 
                     b.Navigation("MereBiologique");
 
                     b.Navigation("PereBiologique");
-                });
-
-            modelBuilder.Entity("SW.Models.Distinction", b =>
-                {
-                    b.HasOne("SW.Models.Citoyen", null)
-                        .WithMany("Distinctions")
-                        .HasForeignKey("CitoyenId");
-
-                    b.HasOne("SW.Models.Citoyen", "DecerneA")
-                        .WithMany()
-                        .HasForeignKey("DecerneAId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("SW.Models.Citoyen", "DecernePar")
-                        .WithMany()
-                        .HasForeignKey("DecerneParId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("DecerneA");
-
-                    b.Navigation("DecernePar");
-                });
-
-            modelBuilder.Entity("SW.Models.Citoyen", b =>
-                {
-                    b.Navigation("Distinctions");
                 });
 #pragma warning restore 612, 618
         }

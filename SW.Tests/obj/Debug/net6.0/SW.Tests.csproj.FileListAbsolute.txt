@@ -292,3 +292,12 @@ D:\SW\SW\SW.Tests\obj\Debug\net6.0\refint\SW.Tests.dll
 D:\SW\SW\SW.Tests\obj\Debug\net6.0\SW.Tests.pdb
 D:\SW\SW\SW.Tests\obj\Debug\net6.0\SW.Tests.genruntimeconfig.cache
 D:\SW\SW\SW.Tests\obj\Debug\net6.0\ref\SW.Tests.dll
+D:\SW\SW\SW.Tests\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\SW\SW\SW.Tests\bin\Debug\net6.0\Microsoft.Extensions.Configuration.FileExtensions.dll
+D:\SW\SW\SW.Tests\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Json.dll
+D:\SW\SW\SW.Tests\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\SW\SW\SW.Tests\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Physical.dll
+D:\SW\SW\SW.Tests\bin\Debug\net6.0\Microsoft.Extensions.FileSystemGlobbing.dll
+D:\SW\SW\SW.Tests\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\SW\SW\SW.Tests\bin\Debug\net6.0\System.Text.Json.dll
+D:\SW\SW\SW.Tests\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll

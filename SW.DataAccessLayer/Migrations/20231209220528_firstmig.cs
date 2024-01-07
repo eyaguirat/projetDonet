@@ -4,12 +4,12 @@
 
 namespace SW.DataAccessLayer.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class firstmig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Espece",
+                name: "Especes",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "INTEGER", nullable: false)
@@ -20,7 +20,7 @@ namespace SW.DataAccessLayer.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Espece", x => x.Id);
+                    table.PrimaryKey("PK_Especes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -32,9 +32,12 @@ namespace SW.DataAccessLayer.Migrations
                     Nom = table.Column<string>(type: "TEXT", nullable: false),
                     Prenom = table.Column<string>(type: "TEXT", nullable: false),
                     Age = table.Column<int>(type: "INTEGER", nullable: false),
-                    EspeceId = table.Column<int>(type: "INTEGER", nullable: false),
-                    PereBiologiqueID = table.Column<int>(type: "INTEGER", nullable: false),
-                    MereBiologiqueID = table.Column<int>(type: "INTEGER", nullable: false)
+                    EspeceId = table.Column<int>(type: "INTEGER", nullable: true),
+                    PereBiologiqueID = table.Column<int>(type: "INTEGER", nullable: true),
+                    MereBiologiqueID = table.Column<int>(type: "INTEGER", nullable: true),
+                    Bonheur = table.Column<int>(type: "INTEGER", nullable: true),
+                    Fertilite = table.Column<int>(type: "INTEGER", nullable: true),
+                    PointsDeMerites = table.Column<int>(type: "INTEGER", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -43,20 +46,17 @@ namespace SW.DataAccessLayer.Migrations
                         name: "FK_Citoyens_Citoyens_MereBiologiqueID",
                         column: x => x.MereBiologiqueID,
                         principalTable: "Citoyens",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Citoyens_Citoyens_PereBiologiqueID",
                         column: x => x.PereBiologiqueID,
                         principalTable: "Citoyens",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.SetNull);
+                        principalColumn: "Id");
                     table.ForeignKey(
-                        name: "FK_Citoyens_Espece_EspeceId",
+                        name: "FK_Citoyens_Especes_EspeceId",
                         column: x => x.EspeceId,
-                        principalTable: "Espece",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalTable: "Especes",
+                        principalColumn: "Id");
                 });
 
             migrationBuilder.CreateIndex(
@@ -81,7 +81,7 @@ namespace SW.DataAccessLayer.Migrations
                 name: "Citoyens");
 
             migrationBuilder.DropTable(
-                name: "Espece");
+                name: "Especes");
         }
     }
 }

@@ -16,6 +16,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = D:\SW\SW\SW.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/SW/SW/SW.Web/Views/Citoyen/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0b3llblxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/SW/SW/SW.Web/Views/Citoyen/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2l0b3llblxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/SW/SW/SW.Web/Views/Espece/Add.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNlXEFkZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

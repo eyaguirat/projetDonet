@@ -1,18 +1,40 @@
-﻿@using SW.Models
+﻿@model SW.Models.Espece
 
-@model SW.Web.ViewModels.AddEspeceViewModel
 @{
     ViewData["Title"] = "Add";
 }
 
 <h1>Add</h1>
 
-@* Utilisation des tag helpers pour faciliter la création du formulaire *@
-<form asp-controller="Espece" asp-action="Add" method="post">
-    <input asp-for="Nom" />
+<h4>Espece</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Add">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Nom" class="control-label"></label>
+                <input asp-for="Nom" class="form-control" />
+                <span asp-validation-for="Nom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Longevite" class="control-label"></label>
+                <input asp-for="Longevite" class="form-control" />
+                <span asp-validation-for="Longevite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Majorite" class="control-label"></label>
+                <input asp-for="Majorite" class="form-control" />
+                <span asp-validation-for="Majorite" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
 
-    <input asp-for="Longevite" />
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
 
-    <input asp-for="Majorite" />
-    <button type="submit">Submit</button>
-</form>
