@@ -1,5 +1,6 @@
 ﻿@model SW.Models.Citoyen
 
+
 @{
     ViewData["Title"] = "Add";
 }
@@ -41,6 +42,21 @@
                 <label asp-for="PointsDeMerites" class="control-label"></label>
                 <input asp-for="PointsDeMerites" class="form-control" />
                 <span asp-validation-for="PointsDeMerites" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label asp-for="PereBiologiqueID" class="form-label">Père Biologique</label>
+                <select name="PereBiologiqueID" asp-items="@(new SelectList(Model.Citoyens, "Id", "Nom"))" class="form-select">
+                    <option value="">Sélectionnez le père</option>
+                </select>
+                <span asp-validation-for="PereBiologiqueID" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="MereBiologiqueID" class="form-label">Mère Biologique</label>
+                <select name="MereBiologiqueID" asp-items="@(new SelectList(Model.Citoyens, "Id", "Nom"))" class="form-select">
+                    <option value="">Sélectionnez la mère</option>
+                </select>
+                <span asp-validation-for="MereBiologiqueID" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

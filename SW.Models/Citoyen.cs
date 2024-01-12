@@ -1,7 +1,12 @@
-﻿namespace SW.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace SW.Models
 {
     public class Citoyen
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public string Nom { get; set; }
         public string Prenom { get; set; }
@@ -14,6 +19,8 @@
         public int? Bonheur { get; set; }
         public int? Fertilite { get; set; }
         public int? PointsDeMerites { get; set; }
+
+        public List<Citoyen> Citoyens { get; set; }
 
 
 

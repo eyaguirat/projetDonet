@@ -16,6 +16,8 @@ namespace SW.DataAccessLayer
 
         public DbSet<Espece> Especes { get; set; }
 
+        public DbSet<EvenementAleatoire> EvenementsAleatoires { get; set; }
+
 
         public StarWarsDBContext(DbContextOptions<StarWarsDBContext> options) : base(options)
         {

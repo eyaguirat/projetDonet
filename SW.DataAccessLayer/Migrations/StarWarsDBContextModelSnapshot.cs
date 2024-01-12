@@ -84,6 +84,20 @@ namespace SW.DataAccessLayer.Migrations
                     b.ToTable("Especes");
                 });
 
+            modelBuilder.Entity("SW.Models.EvenementAleatoire", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Type")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EvenementsAleatoires");
+                });
+
             modelBuilder.Entity("SW.Models.Citoyen", b =>
                 {
                     b.HasOne("SW.Models.Espece", "Espece")

@@ -27,5 +27,10 @@ namespace SW.DataAccessLayer
         {
             return _starWarsDBContext.Citoyens.ToList();
         }
+
+        public Citoyen GetCitoyenById(int id)
+        {
+            return _starWarsDBContext.Citoyens.FirstOrDefault(c => c.Id == id);
+        }
     }
 }

@@ -20,6 +20,10 @@ builder.Services.AddScoped<CitoyenRepository>();
 builder.Services.AddScoped<CitoyenService>();
 
 
+builder.Services.AddScoped<EvenementAleatoireRepository>();
+builder.Services.AddScoped<EvenementAleatoireService>();
+
+
 // Injection de dépendance du DivisionCitoyen
 //builder.Services.AddScoped<DivisionCitoyen>();
 
